@@ -1,0 +1,12 @@
+<%- include("./includes/head") %>
+<section class="details">
+  <h1 class="de-title"><%= post.title %></h1>
+  <img src="<%= post.photo %>" alt="<%= post.title %>" />
+  <p><%= post.description %></p>
+  <hr />
+  <form action="/admin/post/<%= post.id %>" method="post">
+    <button>Delete Post</button>
+  </form>
+  <a href="/admin/post-edit/<%= post.id %>" class="btn-edit">Edit Post</a>
+</section>
+<%- include("./includes/foot") %>
